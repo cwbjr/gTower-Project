@@ -1,28 +1,28 @@
-const connection = require('./connection');
+const connect = require('./connection');
 
 module.exports = {
   getAll() {
-    return connection('players');
+    return connect('players');
   },
   getOne(id) {
-    return connection('players')
+    return connect('players')
       .where('id', id)
       .first();
   },
   create(product) {
-    return connection('players')
+    return connect('players')
       .insert(product, 'id')
       .then(ids => {
         return ids[0];
       });
   },
   update(id, product) {
-    return connection('players')
+    return connect('players')
       .where('id', id)
       .update(product);
   },
   delete(id) {
-    return connection('players')
+    return connect('players')
       .where('id', id)
       .del();
   }
