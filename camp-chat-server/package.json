@@ -1,0 +1,24 @@
+{
+  "name": "camp-chat-server",
+  "version": "1.0.0",
+  "description": "Tower Project - g70",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tower"
+  ],
+  "author": "Charles Ballew",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^2.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.2",
+    "knex": "^0.14.4",
+    "pg": "^7.4.1"
+  }
+}
