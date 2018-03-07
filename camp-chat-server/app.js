@@ -3,9 +3,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-const player = require('./router/player');
-const origin = require('./router/origin');
-const profession = require('./router/profession');
+const player = require('./routes/player');
+const origin = require('./routes/origin');
+const profession = require('./routes/profession');
 
 const app = express();
 

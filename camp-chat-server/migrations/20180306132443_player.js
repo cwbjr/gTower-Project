@@ -5,8 +5,8 @@ exports.up = function(knex, Promise) {
     table.text('name').notNullable();
     table.text('tagline');
     table.integer('level').unsigned().notNullable();
-    table.text('class').notNullable();
-    table.text('race').notNullable();
+    table.interger('profession_id').unsigned().index().references('id').inTable('profession')
+    table.interger('origin_id').unsigned().index().references('id').inTable('origin')
     table.text('image');
   });
 };
