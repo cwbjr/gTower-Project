@@ -1,6 +1,6 @@
 
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('classes', (table) => {
+  return knex.schema.createTable('profession', (table) => {
     table.increments();
     table.text('class').notNullable();
     table.text('avatar');
@@ -8,5 +8,5 @@ exports.up = function(knex, Promise) {
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTableIfExists('classes');
+  return knex.schema.dropTableIfExists('profession');
 };

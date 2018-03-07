@@ -1,3 +1,3 @@
 const express = require('express');
 const router = express.Router();
-const queries = require('../db/classes-queries');
+const queries = require('../db/origin-queries');

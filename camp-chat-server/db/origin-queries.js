@@ -2,27 +2,27 @@ const connection = require('./connection');
 
 module.exports = {
   getAll() {
-    return connection('classes');
+    return connection('origin');
   },
   getOne(id) {
-    return connection('classes')
+    return connection('origin')
       .where('id', id)
       .first();
   },
-  create(product) {
-    return connection('classes')
-      .insert(product, 'id')
+  create(origin) {
+    return connection('origin')
+      .insert(origin, 'id')
       .then(ids => {
         return ids[0];
       });
   },
-  update(id, product) {
-    return connection('classes')
+  update(id, origin) {
+    return connection('origin')
       .where('id', id)
-      .update(product);
+      .update(origin);
   },
   delete(id) {
-    return connection('classes')
+    return connection('origin')
       .where('id', id)
       .del();
   }
